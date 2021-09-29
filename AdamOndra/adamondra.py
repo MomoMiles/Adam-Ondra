@@ -46,7 +46,7 @@ class adamondra(commands.Cog):
             await ctx.send(embed=data)
         else: 
             data = discord.Embed(colour=user.colour)
-            data.add_field(name="Error:warning:",value="Opps, it seems like you already have a climbing profile, {}.".format(user.mention))
+            data.add_field(name="Error:warning:",value="Oops, it seems like you already have a climbing profile, {}.".format(user.mention))
             await ctx.send(embed=data)
 
     @commands.command(name="unsignup")

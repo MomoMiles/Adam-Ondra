@@ -61,6 +61,6 @@ class adamondra(commands.Cog):
         else:
             data = discord.Embed(colour=user.colour)
             data.add_field(name="Error:Warning",value="Oops, seems like you're trying to delete an account you don't have.")
-            await.ctx.send(embed=data)
+            await ctx.send(embed=data)
 
 

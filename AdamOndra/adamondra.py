@@ -48,3 +48,19 @@ class adamondra(commands.Cog):
             data = discord.Embed(colour=user.colour)
             data.add_field(name="Error:warning:",value="Opps, it seems like you already have a climbing profile, {}.".format(user.mention))
             await ctx.send(embed=data)
+
+    @commands.command(name="unsignup")
+    @commands.guild_only()
+    async def unsignup(self, ctx):
+        "Removes account"
+        server = ctx.guild
+        user = ctx.author
+        db = await self.config.guild(server).db()
+        if user.id in db:
+            db.delete(user.id)
+        else:
+            data = discord.Embed(colour=user.colour)
+            data.add_field(name="Error:Warning",value="Oops, seems like you're trying to delete an account you don't have.")
+            await.ctx.send(embed=data)
+
+

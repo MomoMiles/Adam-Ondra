@@ -57,7 +57,7 @@ class adamondra(commands.Cog):
         user = ctx.author
         db = await self.config.guild(server).db()
         if user.id in db:
-            db.delete(user.id)
+            db.remove(user.id)
         else:
             data = discord.Embed(colour=user.colour)
             data.add_field(name="Error:Warning",value="Oops, seems like you're trying to delete an account you don't have.")

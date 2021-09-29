@@ -42,9 +42,9 @@ class adamondra(commands.Cog):
             db.append(user.id)
             await self.config.guild(server).db.set(db)
             data = discord.Embed(colour=user.colour)
-            data.add_field(name="Congrats!:sparkles:", value="You have officially created your account for **{}**, {}.".format(server.name, user.mention))
+            data.add_field(name="Congrats!:sparkles:", value="You have officially created your climbing profile for **{}**, {}.".format(server.name, user.mention))
             await ctx.send(embed=data)
         else: 
             data = discord.Embed(colour=user.colour)
-            data.add_field(name="Error:warning:",value="Opps, it seems like you already have an account, {}.".format(user.mention))
+            data.add_field(name="Error:warning:",value="Opps, it seems like you already have a climbing profile, {}.".format(user.mention))
             await ctx.send(embed=data)

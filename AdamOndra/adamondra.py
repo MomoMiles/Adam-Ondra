@@ -17,7 +17,7 @@ class adamondra(commands.Cog):
             "Location": None,
             "About": None,
             "Gender": None,
-            "Personal Best": None,
+            "PB": None,
             "Reddit": None,
             "Other": None,
             "Avatar": None
